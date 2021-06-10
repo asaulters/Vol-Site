@@ -360,6 +360,81 @@ SM Tablet--------------------------------------------------
 --------------------------------------------------*/
 
 @media (min-width: 600px) {
+  footer {
+    /* position: absolute; */
+    /* bottom: -180; */
+    width: 100vw;
+    /* height: 100px; */
+    /* margin-bottom: -10%; */
+  }
+
+  .mainFooter {
+    height: 100px;
+    /* position: fixed; */
+    bottom: 0;
+    margin-bottom: -10%;
+    grid-template-rows: 100%;
+    grid-template-columns: 20% 80%;
+    width: 100vw;
+    background-color: transparent;
+  }
+  .footerLogo-Div {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    /* height: fit-content; */
+    height: 100%;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    margin-bottom: -55%;
+    margin-left: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .footer-a {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-self: center;
+    margin: auto;
+    /* padding-left: 20%; */
+  }
+  .logoFooter {
+    height: 25%;
+    width: 50%;
+    /* margin-top: 1px;
+            margin-right: auto; */
+    padding: 0;
+    background-color: transparent;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    /* margin: 0%; */
+    align-self: center;
+  }
+  .footerLinks {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 0;
+    background-color: #eeeff4;
+    width: 110%;
+    height: 100%;
+    margin-right: 25%;
+    /* margin-left: -13%; */
+    /* padding-right: 20%; */
+  }
+  .footerBtn {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    height: 65%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
   .home-HIW {
     width: 80%;
     margin: auto;
@@ -437,6 +512,12 @@ Desktop SM
     width: 80%;
     margin: auto;
   }
+  .home-contact {
+    margin-bottom: -20%;
+  }
+  .home-contactA {
+    margin-left: 45%;
+  }
 }
 
 /* 
@@ -496,6 +577,7 @@ Desktop SMish
   .home-HIWWUH3,
   .home-HIWp {
     text-align: left;
+    padding-left: 5%;
   }
 
   .home-HIWImg1 {
@@ -516,5 +598,8 @@ Desktop SMish
     background-image: url(/assets/home/desktop/enjoyment1.png);
     background-size: 100% 100%;
     display: none;
+  }
+  .on {
+    border-left: 3px blue solid;
   }
 }
