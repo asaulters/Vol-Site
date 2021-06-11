@@ -525,6 +525,25 @@ Desktop SM
 Desktop SMish
 */
 @media (min-width: 1000px) {
+  .home-OrgTop {
+    grid-template-columns: 20% 20% 60%;
+    grid-template-rows: 100%;
+    height: 500px;
+  }
+  .home-OrgTopCTA {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    z-index: 1;
+    width: 75%;
+    height: min-content;
+    margin-top: 20%;
+  }
+  .home-OrgTopImg {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    z-index: -1;
+  }
+
   .home-about {
     grid-template-columns: 50% 50%;
     grid-template-rows: 400px 400px 400px;
