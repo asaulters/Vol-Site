@@ -179,7 +179,9 @@ End Footer-----------------------------
 /* 
 Org -> dev
 */
-
+.home-DevContainer {
+  display: none;
+}
 .home-topQuestion {
   background-color: #ccd5ae;
   display: grid;
@@ -552,7 +554,8 @@ Desktop SM-----------------------------------------------------------
     background-color: #fefae0;
     border-radius: 15px;
   }
-  .home-OrgTopImg {
+  .home-OrgTopImg,
+  .home-DevTopImg {
     z-index: -1;
   }
   .home-about {
@@ -754,7 +757,7 @@ Desktop SMish-----------------------------------------------------
     display: none;
   }
   .home-HIWImg3Dev {
-    background-image: url(/assets/home/desktop/typing.png);
+    background-image: url(/assets/home/desktop/Create-site.png);
     background-size: 100% 100%;
     display: none;
   }
