@@ -243,8 +243,9 @@ Org -> dev
   display: grid;
   grid-template-rows: 300px 100px 300px 100px 300px 100px;
   width: 95%;
-  margin: auto;
-  border-bottom: 1px solid lightgray;
+  margin: 5% auto 10% auto;
+
+  gap: 20px;
 }
 .home-aboutImg1 {
   grid-row: 1/2;
@@ -254,6 +255,7 @@ Org -> dev
 .home-aboutWU1 {
   grid-row: 2/3;
   font-size: 1.25rem;
+  margin-bottom: 10%;
 }
 .home-aboutImg2 {
   grid-row: 3/4;
@@ -263,6 +265,7 @@ Org -> dev
 .home-aboutWU2 {
   grid-row: 4/5;
   font-size: 1.25rem;
+  margin-bottom: 10%;
 }
 
 .home-aboutImg3 {
@@ -273,15 +276,18 @@ Org -> dev
 .home-aboutWU3 {
   grid-row: 6/7;
   font-size: 1.25rem;
+  margin-bottom: 10%;
 }
 .home-HIWWU {
   padding-top: 10%;
+  border-top: 1px solid lightgray;
   border-bottom: 1px lightgray solid;
   padding-bottom: 10%;
 }
 .home-HIWH1 {
   font-size: 2rem;
   text-align: center;
+  padding-bottom: 5%;
 }
 .home-HIWWUH3 {
   font-size: 1.5rem;
@@ -352,6 +358,38 @@ Org -> dev
   text-align: center;
   font-size: 1.2rem;
   margin-left: 35%;
+}
+
+/* 
+dev side
+*/
+.home-DevTop {
+  display: grid;
+  grid-template-rows: 60% 40%;
+  height: 60vh;
+  width: 95%;
+  margin: auto auto 10% auto;
+}
+.home-DevTopImg {
+  grid-row: 1/2;
+  background-image: url(/assets/home/mobile/happy-dev1.jpg);
+  background-size: 100% 100%;
+}
+.home-DevTopCTA {
+  grid-row: 2/3;
+  background-color: rgb(250, 249, 249);
+}
+.home-DevTopCTAWU {
+  padding: 0% 10% 10% 10%;
+}
+.home-DevTopCTAH1 {
+  font-size: 1.5rem;
+}
+.home-DevTopBtn {
+  align-self: center;
+  width: 95%;
+  height: 40px;
+  border-radius: 20px;
 }
 
 /* --------------------------------------------------
@@ -503,7 +541,8 @@ Desktop SM-----------------------------------------------------------
 -----------------------------------------------------------*/
 
 @media (min-width: 800px) {
-  .home-OrgTopCTAWU {
+  .home-OrgTopCTAWU,
+  .home-DevTopCTAWU {
     width: 50%;
 
     margin: -10% auto 10% auto;
@@ -583,28 +622,37 @@ Desktop SMish-----------------------------------------------------
   .home-topQBtn2 {
     margin-left: 3%;
   }
-  .home-OrgTop {
+  .home-OrgTop,
+  .home-DevTop {
     grid-template-columns: 20% 20% 60%;
     grid-template-rows: 100%;
-    height: 600px;
+    height: 70vh;
   }
-  .home-OrgTopCTA {
+  .home-OrgTopCTA,
+  .home-DevTopCTA {
     grid-column: 1/3;
     grid-row: 1/2;
     z-index: 1;
-    width: 100%;
+    width: 110%;
     height: min-content;
     margin-top: 40%;
     background-color: transparent;
   }
-  .home-OrgTopCTAWU {
+  .home-OrgTopCTAWU,
+  .home-DevTopCTAWU {
     padding: 7%;
   }
   .home-OrgTopImg {
     grid-column: 1/4;
     grid-row: 1/2;
     z-index: -1;
-    background-image: url(/assets/home/desktop/Happy\ Woman.jpg);
+    background-image: url(/assets/home/desktop/happy-woman3.jpg);
+  }
+  .home-DevTopImg {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    z-index: -1;
+    background-image: url(/assets/home/desktop/happy-devLrg.jpg);
   }
 
   .home-about {
@@ -663,7 +711,7 @@ Desktop SMish-----------------------------------------------------
   }
 
   .home-HIWImg1 {
-    background-image: url(/assets/home/desktop/job_post.png);
+    background-image: url(/assets/home/desktop/computer.svg);
     background-size: 100% 100%;
   }
   .home-HIWImg2 {
@@ -672,12 +720,12 @@ Desktop SMish-----------------------------------------------------
     display: none;
   }
   .home-HIWImg3 {
-    background-image: url(/assets/home/desktop/review1.png);
+    background-image: url(/assets/home/desktop/review\ 3.svg);
     background-size: 100% 100%;
     display: none;
   }
   .home-HIWImg4 {
-    background-image: url(/assets/home/desktop/enjoyment1.png);
+    background-image: url(/assets/home/desktop/enjoyment3.png);
     background-size: 100% 100%;
     display: none;
   }
@@ -692,6 +740,29 @@ Desktop SMish-----------------------------------------------------
   .home-contactA {
     margin-left: 45%;
   }
+  /* 
+  -------------------------------------------------
+  Dev Side-------------------------------
+  */
+  .home-HIWImg1Dev {
+    background-image: url(/assets/home/desktop/add-user.png);
+    background-size: 100% 100%;
+  }
+  .home-HIWImg2Dev {
+    background-image: url(/assets/home/desktop/communicate.png);
+    background-size: 100% 100%;
+    display: none;
+  }
+  .home-HIWImg3Dev {
+    background-image: url(/assets/home/desktop/typing.png);
+    background-size: 100% 100%;
+    display: none;
+  }
+  .home-HIWImg4Dev {
+    background-image: url(/assets/home/desktop/cv.png);
+    background-size: 100% 100%;
+    display: none;
+  }
 }
 
 /* 
@@ -700,5 +771,18 @@ Contact adjustment
 @media (min-width: 1000px) {
   .home-contactA {
     margin-left: 46%;
+  }
+}
+/* 
+-------------------------------------------------------
+Desktop MD-Lrg
+---------------------------------------------------
+*/
+
+@media (min-width: 1300px) {
+  .home-OrgTopCTA {
+    width: 130%;
+    height: min-content;
+    margin-top: 40%;
   }
 }
