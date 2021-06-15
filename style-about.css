@@ -1,0 +1,306 @@
+/* ---------------------------------------
+------------------------------------------------------
+Shared Nav / footer---------------------------
+------------------------------------------------------
+---------------------------------------*/
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.logo {
+  color: rgb(224, 224, 224);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+  width: 60%;
+  height: 60%;
+}
+
+.logoTop {
+  height: 40%;
+  width: 40%;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 40%;
+  z-index: 20;
+  background-color: white;
+}
+
+.nav-links li {
+  list-style: none;
+  background-color: white;
+}
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+  background-color: white;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(224, 224, 224);
+  margin: 5px;
+  transition: all 0.3 ease;
+}
+
+/* -----------------------------------------
+    -----------------------------------------
+    NAV Functionality-----------
+    -----------------------------------------
+    -----------------------------------------*/
+@media screen and (max-width: 900px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 0;
+    height: 300px;
+    top: 8vh;
+    /* background-color: #ffffff; */
+    background-color: #ccd5ae;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* ------------------------------------------
+    -----------------------------------------
+    End Nav-------------------------------------
+    -----------------------------------------
+    -----------------------------------------*/
+/* 
+    Footer
+    */
+.mainFooter {
+  background-color: #eeeff4;
+  height: 300px;
+  margin-top: 30%;
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: 25% 75%;
+}
+.footerLogo-Div {
+  margin-top: -55%;
+  margin-left: 20%;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  align-self: center;
+  width: 35%;
+  height: 35%;
+  background-color: black;
+  /* display: flex;
+      align-content: center; */
+}
+.logoFooter {
+  width: 75%;
+  height: 75%;
+  background-color: black;
+  color: white;
+  padding: 40%;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  margin: auto;
+  align-self: center;
+}
+.footerLinks {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 20%;
+  text-emphasis: none;
+  list-style: none;
+  margin-top: -10%;
+}
+
+/* -------------------------------
+  End Footer-----------------------------
+  ----------------------------------------*/
+/* 
+Begining Mobile
+*/
+.about-top {
+  display: grid;
+  grid-template-rows: 55% 45%;
+  height: 60vh;
+}
+.about-TopImg {
+  background-image: url(/assets/about/mobile/top1.jpg);
+  background-size: 100% 100%;
+  grid-row: 1/2;
+  text-align: center;
+}
+.about-topWU {
+  grid-row: 2/3;
+}
+.about-topH3 {
+  padding-top: 5%;
+  text-align: center;
+}
+.about-topH1 {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  border-bottom: lightgray 1px solid;
+  padding-bottom: 10%;
+}
+
+/* --------------------------------------------------
+--------------------------------------------------
+SM Tablet--------------------------------------------------
+--------------------------------------------------*/
+
+@media (min-width: 600px) {
+  .logoTop {
+    height: 20%;
+    width: 25%;
+  }
+  footer {
+    /* position: absolute; */
+    /* bottom: -180; */
+    width: 100vw;
+    /* height: 100px; */
+    /* margin-bottom: -10%; */
+  }
+
+  .mainFooter {
+    height: 100px;
+    /* position: fixed; */
+    bottom: 0;
+    margin-bottom: -10%;
+    grid-template-rows: 100%;
+    grid-template-columns: 20% 80%;
+    width: 100vw;
+    background-color: transparent;
+  }
+  .footerLogo-Div {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    /* height: fit-content; */
+    height: 100%;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    margin-bottom: -55%;
+    margin-left: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .footer-a {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-self: center;
+    margin: auto;
+    /* padding-left: 20%; */
+  }
+  .logoFooter {
+    height: 25%;
+    width: 50%;
+    /* margin-top: 1px;
+              margin-right: auto; */
+    padding: 0;
+    background-color: transparent;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    /* margin: 0%; */
+    align-self: center;
+  }
+  .footerLinks {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 0;
+    background-color: #eeeff4;
+    width: 110%;
+    height: 100%;
+    margin-right: 25%;
+    /* margin-left: -13%; */
+    /* padding-right: 20%; */
+  }
+  .footerBtn {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    height: 65%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* ----------------------------------------------------------------------
+-------------------------------------------------------------------
+Desktop SMish-----------------------------------------------------
+----------------------------------------------------------------------*/
+@media (min-width: 1000px) {
+  .logoTop {
+    height: 20%;
+    width: 20%;
+    max-height: 100px;
+    max-width: 150px;
+    margin-left: 5%;
+  }
+}
