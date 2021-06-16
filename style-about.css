@@ -184,10 +184,27 @@ Begining Mobile
   height: 60vh;
 }
 .about-TopImg {
-  background-image: url(/assets/about/mobile/top1.jpg);
+  background-image: url(/assets/about/bnr2-tinted.jpg);
   background-size: 100% 100%;
   grid-row: 1/2;
   text-align: center;
+  background-color: blue;
+}
+.about-topImgH1 {
+  margin-top: 20%;
+  font-size: 2rem;
+  color: white;
+}
+.about-topImgH4 {
+  /* margin-top: 20%; */
+  font-size: 1.5rem;
+  color: white;
+  padding-bottom: 10%;
+}
+.about-topImgA {
+  text-decoration: none;
+  color: white;
+  margin-top: -50%;
 }
 .about-topWU {
   grid-row: 2/3;
@@ -205,10 +222,16 @@ Begining Mobile
   padding-bottom: 10%;
   font-size: 2rem;
 }
+.about-WU {
+  border-bottom: 1px lightgray solid;
+  padding-bottom: 10%;
+}
 .about-aboutWU {
-  width: 95%;
+  width: 100%;
   margin: auto;
   margin-top: 10%;
+  display: grid;
+  margin-bottom: -20%;
 }
 .about-aboutWUH2,
 .about-aboutWUP {
@@ -335,6 +358,11 @@ SM Tablet--------------------------------------------------
     flex-direction: row;
     justify-content: center;
   }
+  .about-aboutFor {
+    width: 90%;
+    margin: auto auto -10% auto;
+    /* border-top: 1px lightgray solid; */
+  }
 }
 
 /* 
@@ -371,10 +399,29 @@ Desktop SMish-----------------------------------------------------
     max-width: 150px;
     margin-left: 5%;
   }
-  .about-aboutOrg,
-  .about-aboutDev {
+  .about-aboutOrg {
     grid-template-rows: 100%;
     grid-template-columns: 50% 50%;
+  }
+  .about-aboutFor {
+    width: 90%;
+    margin: auto;
+    margin-bottom: -20%;
+  }
+  .about-WU {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .about-WUWU {
+    grid-column: 1/2;
+    padding-right: 5%;
+  }
+  .about-WUImg {
+    grid-column: 2/3;
+    background-image: url(/assets/about/bg1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-left: 5%;
   }
 
   .about-aboutWU {
@@ -383,25 +430,33 @@ Desktop SMish-----------------------------------------------------
     grid-row: 1/2;
   }
   .about-aboutWU {
-    width: 60%;
-    grid-column: 1/2;
+    width: 70%;
+    grid-column: 2/3;
     grid-row: 1/2;
-    padding: 0% 0% 0% 50%;
-    font-size: 1.1rem;
+    padding: 0% 0% 0% 20%;
+    font-size: 1.8rem;
     font-weight: 800;
   }
   .about-aboutOrgImg {
     grid-column: 1/3;
-    background-image: url(/assets/about/tablet/org2.jpg);
+    background-image: url(/assets/about/pexels-tima-miroshnichenko-5717512.jpg);
+  }
+  .about-aboutDev {
+    grid-template-rows: 100%;
+    grid-template-columns: 40% 60%;
   }
   .about-aboutDevImg {
+    grid-template-rows: 100%;
     grid-column: 1/3;
-    background-image: url(/assets/about/tablet/dev1.jpg);
+    background-image: url(/assets/about/bg5.jpg);
   }
   #about-aboutDevWU {
-    grid-column: 2/3;
-    /* padding: 0% 0% 0% 50%; */
-    margin-left: -20%;
-    margin-top: -2%;
+    width: 100%;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 10% 0% 0% 10%;
+    /* margin-left: -20%; */
+    margin-top: 20%;
+    font-size: 1.8rem;
   }
 }
