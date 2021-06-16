@@ -195,13 +195,59 @@ Begining Mobile
 .about-topH3 {
   padding-top: 5%;
   text-align: center;
+  font-size: 1.25rem;
 }
 .about-topH1 {
   text-align: center;
-  width: 80%;
+  width: 90%;
   margin: auto;
   border-bottom: lightgray 1px solid;
   padding-bottom: 10%;
+  font-size: 2rem;
+}
+.about-aboutWU {
+  width: 95%;
+  margin: auto;
+  margin-top: 10%;
+}
+.about-aboutWUH2,
+.about-aboutWUP {
+  font-size: 1.3rem;
+}
+.about-aboutOrg,
+.about-aboutDev {
+  display: grid;
+  grid-template-rows: 55% 45%;
+  height: 65vh;
+
+  margin-top: 10%;
+}
+/* .about-aboutDev {
+  margin-bottom: 20%;
+} */
+.about-aboutOrgImg {
+  height: 100%;
+  width: 100%;
+  grid-row: 1/2;
+  background-image: url(/assets/about/mobile/org1.jpg);
+  background-size: 100% 100%;
+}
+.about-aboutWU {
+  grid-row: 2/3;
+  height: min-content;
+}
+.about-aboutDevImg {
+  grid-row: 1/2;
+  background-image: url(/assets/about/mobile/devs1.jpg);
+  background-size: 100% 100%;
+}
+.about-aboutForP {
+  /* padding-bottom: 20%; */
+  font-size: 1.3rem;
+}
+.about-WU {
+  width: 90%;
+  margin: auto;
 }
 
 /* --------------------------------------------------
@@ -291,6 +337,28 @@ SM Tablet--------------------------------------------------
   }
 }
 
+/* 
+Tblet Md
+*/
+
+@media (min-width: 750px) {
+  .about-aboutOrg,
+  .about-aboutDev {
+    display: grid;
+    grid-template-rows: 70% 30%;
+    height: 75vh;
+
+    /* margin-top: 10%; */
+  }
+  .about-top {
+    height: 80vh;
+  }
+  .about-topWU {
+    width: 70%;
+    margin: auto;
+  }
+}
+
 /* ----------------------------------------------------------------------
 -------------------------------------------------------------------
 Desktop SMish-----------------------------------------------------
@@ -302,5 +370,38 @@ Desktop SMish-----------------------------------------------------
     max-height: 100px;
     max-width: 150px;
     margin-left: 5%;
+  }
+  .about-aboutOrg,
+  .about-aboutDev {
+    grid-template-rows: 100%;
+    grid-template-columns: 50% 50%;
+  }
+
+  .about-aboutWU {
+    width: 50%;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .about-aboutWU {
+    width: 60%;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 0% 0% 0% 50%;
+    font-size: 1.1rem;
+    font-weight: 800;
+  }
+  .about-aboutOrgImg {
+    grid-column: 1/3;
+    background-image: url(/assets/about/tablet/org2.jpg);
+  }
+  .about-aboutDevImg {
+    grid-column: 1/3;
+    background-image: url(/assets/about/tablet/dev1.jpg);
+  }
+  #about-aboutDevWU {
+    grid-column: 2/3;
+    /* padding: 0% 0% 0% 50%; */
+    margin-left: -20%;
+    margin-top: -2%;
   }
 }
