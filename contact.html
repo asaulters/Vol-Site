@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style-contact.css" />
     <title>Document</title>
   </head>
   <body>
@@ -30,5 +31,63 @@
       </nav>
     </header>
     <!-- /nav -->
+    <div class="contact-top">
+      <section class="contact-top">
+        <div class="contact-topWU">
+          <h3 class="contact-topH3">Give Us a Shout</h3>
+          <h1 class="contact-topH1">
+            Use the form below to drop us a message.
+          </h1>
+        </div>
+        <div class="contact-TopImg">
+          <h1 class="contact-topImgH1">Contact Us</h1>
+          <h4 class="contact-topImgH4">
+            <a href="/index.html" class="contact-topImgA">Home</a> > Contact Us
+          </h4>
+        </div>
+      </section>
+    </div>
+    <form action="" class="contact-form">
+      <input
+        type="text"
+        name="contactFirstName"
+        class="contact-firstName"
+        placeholder="First Name"
+      />
+      <input
+        type="text"
+        name="contactLasttName"
+        class="contact-lastName"
+        placeholder="Last Name"
+      />
+      <input
+        type="text"
+        name="contactEmail"
+        class="contact-Email"
+        placeholder="Email"
+      />
+      <input
+        type="text"
+        name="contactPhone"
+        class="contact-Phone"
+        placeholder="Phone"
+      />
+      <textarea
+        name="contactMessage"
+        class="contact-Message"
+        cols="30"
+        rows="10"
+        placeholder="How can we help you?"
+      ></textarea>
+      <div class="contact-formMath">
+        <p class="contact-formMathP">
+          How's Your<br />Math?<br /><br />
+          3 +5?
+        </p>
+        <input type="text" name="contactMath" class="contact-contactMath" />
+      </div>
+      <button type="submit" class="contact-submit">Press Me</button>
+    </form>
+    <script src="/script.js"></script>
   </body>
 </html>
