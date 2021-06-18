@@ -19,6 +19,7 @@ let orgContainer = document.querySelector(".home-mainOrgContainer");
 let devContainer = document.querySelector(".home-DevContainer");
 let whoQ1 = document.querySelector(".home-topQBtn1");
 let whoQ2 = document.querySelector(".home-topQBtn2");
+let mapDiv = document.getElementById("contact-map");
 
 //Nav
 const navSlide = () => {
@@ -46,6 +47,36 @@ const navSlide = () => {
 };
 navSlide();
 
+// //contact map
+// // Initialize and add the map
+// function initMap() {
+//   // // The location of bristol
+//   // const bristol = { lat: 36.594, lng: -82.188 };
+//   // // The map, centered at bristol
+//   // const map = new google.maps.Map({
+//   //   zoom: 4,
+//   //   center: bristol,
+//   // });
+//   // console.log(map);
+//   // // The marker, positioned at bristol
+//   // const marker = new google.maps.Marker({
+//   //   position: bristol,
+//   //   map: map,
+//   // });
+//   const loader = new Loader({
+//     apiKey: "AIzaSyAB3V5sceiO6mdbWq91d2twQ40emyThH4Y",
+//     version: "weekly",
+//     ...additionalOptions,
+//   });
+
+//   loader.load().then(() => {
+//     map = new google.maps.Map(document.getElementById("map") as HTMLElement, {
+//       center: { lat: -34.397, lng: 150.644 },
+//       zoom: 8,
+//     });
+//   });
+// }
+// initMap();
 // Dev/Org
 function containerChoose() {
   whoQ1.addEventListener("click", () => {
