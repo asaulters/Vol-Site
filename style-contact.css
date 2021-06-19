@@ -178,7 +178,9 @@ nav {
 /* 
   Begining Mobile
   */
-
+/* html {
+  overflow-x: hidden;
+} */
 .contact-top {
   display: grid;
   grid-template-rows: 55% 45%;
@@ -233,14 +235,29 @@ form input {
   height: 30px;
   box-shadow: lightgray;
 }
+form input::placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  padding-left: 3%;
+}
 form textarea {
   width: 100%;
+}
+form textarea::placeholder {
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+  padding-left: 3%;
 }
 .contact-formMath {
   text-align: center;
 }
+.contact-formMathP {
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+}
 .contact-contactMath {
   width: 25%;
+  font-size: 20px;
 }
 .contact-submit {
   width: 40%;
@@ -270,6 +287,7 @@ form textarea {
 }
 .contact-quickContactTop {
   grid-row: 1/2;
+  font-family: "Open Sans", sans-serif;
 }
 .contact-QuickContactBottom {
   margin-top: 10%;
@@ -290,6 +308,7 @@ form textarea {
 .contactQCWU1 {
   grid-column: 2/3;
   grid-row: 1/2;
+  font-family: "Open Sans", sans-serif;
 }
 .contact-QCImg2 {
   grid-column: 1/2;
@@ -303,6 +322,7 @@ form textarea {
 .contactQCWU2 {
   grid-column: 2/3;
   grid-row: 2/3;
+  font-family: "Open Sans", sans-serif;
 }
 
 /* --------------------------------------------------
@@ -390,6 +410,34 @@ SM Tablet--------------------------------------------------
     flex-direction: row;
     justify-content: center;
   }
+  .contact-firstName,
+  .contact-lastName,
+  .contact-Email {
+    margin-bottom: 2%;
+  }
+  .contact-topWU {
+    clip-path: polygon(
+      30% 0%,
+      70% 0%,
+      100% 0,
+      100% 42%,
+      50% 100%,
+      50% 100%,
+      0 42%,
+      0 0
+    );
+
+    background-color: lightgreen;
+    margin-bottom: 5%;
+  }
+  .contact-bottomWrapper {
+    width: 90%;
+    margin: auto;
+  }
+  .contact-submit {
+    width: 30%;
+    margin: 10% auto 10% 35%;
+  }
 }
 
 /* --------------------------------------------------
@@ -441,39 +489,57 @@ Desktop SMish--------------------------------------------
     grid-template-columns: 50% 50%;
     grid-template-rows: 16.5% 16.5% 33% 20% 13%;
     gap: 5px;
-    height: max-content;
+    height: min-content;
+    width: 60%;
+    margin: 0% auto 10% auto;
   }
   .contact-firstName {
     grid-column: 1/2;
     grid-row: 1/2;
-    width: 80%;
+    width: 90%;
+    height: 50%;
+    margin-bottom: -15%;
   }
-  .contact-lastNam {
+  .contact-lastName {
     grid-column: 2/3;
     grid-row: 1/2;
-    width: 80%;
+    width: 90%;
+    height: 50%;
+    margin-bottom: -15%;
+    margin-left: 10%;
   }
   .contact-Email {
     grid-column: 1/2;
     grid-row: 2/3;
-    width: 80%;
+    width: 90%;
+    height: 50%;
+    margin-bottom: -20%;
+    margin-top: -10%;
   }
   .contact-Phone {
     grid-column: 2/3;
     grid-row: 2/3;
-    width: 100;
+    width: 90%;
+    height: 50%;
+    margin-bottom: -20%;
+    margin-top: -10%;
+    margin-left: 10%;
   }
   .contact-Message {
     grid-column: 1/3;
     grid-row: 3/4;
+    margin-top: -5%;
   }
   .contact-formMath {
     grid-column: 1/3;
     grid-row: 4/5;
+    width: 20%;
+    margin: auto;
   }
   .contact-submit {
     grid-column: 1/3;
     grid-row: 5/6;
+    margin-top: 15%;
   }
 
   .contact-location {
@@ -482,5 +548,115 @@ Desktop SMish--------------------------------------------
   .contact-quickContact {
     height: 350px;
     margin-top: 0%;
+  }
+}
+
+/*-----------------------------------------------------
+-----------------------------------------------------
+desktop MD
+-----------------------------------------------------
+-----------------------------------------------------*/
+@media (min-width: 1200px) {
+  .contact-top {
+    height: 60vh;
+    grid-template-rows: 60% 40%;
+    border-bottom: none;
+  }
+  .contact-topWU {
+    background-color: lightgreen;
+    height: 90%;
+    clip-path: polygon(
+      30% 0%,
+      70% 0%,
+      100% 0,
+      100% 42%,
+      50% 100%,
+      50% 100%,
+      0 42%,
+      0 0
+    );
+  }
+  .contact-topH1 {
+    margin-top: -2%;
+    /* height: 12vh; */
+    /* border-bottom: none; */
+    /* width: 100%;
+    padding-bottom: 5%;
+    clip-path: polygon(
+      30% 0%,
+      70% 0%,
+      100% 0,
+      100% 8%,
+      48% 100%,
+      47% 100%,
+      0 8%,
+      0 0
+    );
+    
+    background-color: lightgreen; */
+  }
+  .contact-form {
+    margin-top: 0%;
+    /* border-top: 1px lightgray solid; */
+    /* padding-top: 5%; */
+    gap: 10px;
+  }
+  .contact-firstName,
+  .contact-lastName {
+    margin-bottom: 5%;
+  }
+  .contact-submit {
+    width: 20%;
+    margin: 10% auto;
+  }
+  .contact-bottomWrapper {
+    grid-template-rows: 335px;
+    grid-template-columns: 45% 40%;
+    margin: 10% 10% -10% 10%;
+    gap: 30px;
+  }
+}
+
+/* 
+
+Desktop Lrg
+
+*/
+
+@media (min-width: 1400px) {
+  .contact-topImgH1 {
+    margin-top: 5%;
+  }
+  .contact-topWU {
+    height: 90%;
+  }
+  .contact-topH1 {
+    margin-top: -2%;
+  }
+  .contact-submit {
+    width: 20%;
+    margin: 10% auto 10% auto;
+  }
+  /* .contact-bottomWrapper {
+    grid-template-rows: 335px;
+    grid-template-columns: 45% 40%;
+    margin: 10% 10% -10% 10%;
+    gap: 30px;
+  } */
+  .contact-quickContact {
+    height: 100%;
+  }
+  .contact-QuickContactBottom {
+    margin-top: 5%;
+  }
+}
+
+/* 
+
+Desktop larger
+*/
+@media (min-width: 1600px) {
+  .contact-form {
+    gap: 20px;
   }
 }
